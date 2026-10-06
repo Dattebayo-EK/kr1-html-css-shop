@@ -1,205 +1,194 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Главная страница учебного интернет-магазина: преимущества и популярные товары.">
-  <title>Учебный интернет-магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-  <header>
-  <div class="site-header">
-    <a class="site-logo" href="index.html">ShopProject</a>
-
-    <nav class="site-nav" aria-label="Основная навигация">
-      <ul class="site-nav__list">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-        <li><a href="index.html#advantages">Преимущества</a></li>
-        <li><a href="index.html#popular">Популярные товары</a></li>
-        <li><a href="index.html#contacts">Обратная связь</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-  <main>
-    <section class="hero">
-      <h1>Учебный интернет-магазин</h1>
-      <p>
-        Это главная страница учебного интернет-магазина.
-        Посмотрите популярные товары, откройте каталог или заполните
-        учебную форму заявки.
-      </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
-    </section>
-      
-    <section class="section" id="advantages">
-      <h2>Преимущества проекта</h2>
-
-      <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
-      </ul>
-    </section>
-
-    <section class="section" id="popular">
-      <h2>Популярные товары</h2>
-
-      <div class="products-grid">
-        <article class="product-card">
-          <h3>Товар 1</h3>
-          <p>Краткое описание учебного товара.</p>
-          <p>Цена: 1000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
-            Заказать
-          </button>
-        </article>
-
-        <article class="product-card">
-          <h3>Товар 2</h3>
-          <p>Краткое описание учебного товара.</p>
-          <p>Цена: 1500 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 2">
-            Заказать
-          </button>
-        </article>
-
-        <article class="product-card">
-          <h3>Товар 3</h3>
-          <p>Краткое описание учебного товара.</p>
-          <p>Цена: 2000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 3">
-            Заказать
-          </button>
-        </article>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ДораТехно: смартфоны, ноутбуки и наушники. Сравните модели, выберите технику и оформите заявку.">
+    <title>Магазин техники — ДораТехно</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header" id="top">
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="site-header__logo" href="index.html">
+            <span class="site-header__mark" aria-hidden="true">Д</span>ДораТехно</a>
+          <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="cart.html">Корзина</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="order.html">Заявки</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="delivery.html">Доставка</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </section>
-
-    <aside class="aside-info">
-      <h2>Информация о проекте</h2>
-      <p>
-        Сайт создан для практических работ по HTML и CSS.
-        Форма заявки демонстрирует проверку полей в браузере;
-        данные на сервер не отправляются.
-      </p>
-    </aside>
-
-    <section class="section" id="contacts">
-      <h2>Обратная связь</h2>
-      <p>
-        Для учебной заявки выберите товар выше и нажмите «Заказать».
-        Контактная информация находится на отдельной странице.
-      </p>
-      <a class="button" href="contacts.html#feedback">Открыть контакты</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
-
-  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-  <h2 id="order-dialog-title">Оформление заявки</h2>
-
-  <form class="order-form" id="order-form" action="#" method="post" novalidate>
-    <input id="selected-product" name="selected-product" type="hidden">
-
-    <div class="form-field">
-      <label for="order-name">Имя</label>
-      <input
-        id="order-name"
-        name="name"
-        type="text"
-        placeholder="Введите ваше имя"
-        minlength="2"
-        autocomplete="given-name"
-        required
-      >
-    </div>
-
-    <div class="form-field">
-      <label for="order-email">E-mail</label>
-      <input
-        id="order-email"
-        name="email"
-        type="email"
-        placeholder="example@mail.ru"
-        autocomplete="email"
-        required
-      >
-    </div>
-
-    <div class="form-field">
-      <label for="order-phone">Телефон</label>
-      <input
-        id="order-phone"
-        name="phone"
-        type="tel"
-        inputmode="tel"
-        placeholder="+7 (900) 000-00-00"
-        pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-        required
-      >
-      <small>Формат: +7 (900) 000-00-00</small>
-    </div>
-
-    <div class="form-field">
-      <label for="order-date">Дата связи</label>
-      <input
-        id="order-date"
-        name="date"
-        type="date"
-      >
-    </div>
-
-    <div class="form-field">
-      <label for="order-topic">Тема заявки</label>
-      <select id="order-topic" name="topic" required>
-        <option value="">Выберите тему</option>
-        <option value="product">Заказ товара</option>
-        <option value="consultation">Консультация</option>
-        <option value="delivery">Доставка</option>
-      </select>
-    </div>
-
-    <div class="form-field">
-      <label for="order-comment">Комментарий</label>
-      <textarea
-        id="order-comment"
-        name="comment"
-        rows="4"
-        placeholder="Укажите дополнительную информацию"
-      ></textarea>
-    </div>
-
-    <div class="form-field form-field--checkbox">
-      <label>
-        <input
-          id="order-agreement"
-          name="agreement"
-          type="checkbox"
-          required
-        >
-        Я согласен на обработку данных
-      </label>
-    </div>
-
-    <div class="form-actions">
-      <button type="button" id="close-order-dialog">Закрыть</button>
-      <button type="submit">Отправить заявку</button>
-    </div>
-  </form>
-</dialog>
-
-<p class="success-message" id="success-message" hidden>
-  Форма успешно отправлена!
-</p>
-
-</body>
+    </header>
+    <main class="container" id="main">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ДораТехно / технологии каждый день</p>
+          <h1 class="hero__title">Для больших планов<br>и обычных дней.</h1>
+          <p class="hero__text">Ноутбук для новых проектов, смартфон для важных моментов и наушники для любимой музыки. Соберите свой набор на каждый день.</p>
+          <div class="actions">
+            <a class="button" href="catalog.html">Выбрать технику →</a>
+            <a href="product.html">Знакомьтесь: Vector S14</a>
+          </div>
+        </div>
+        <div>
+          <img class="hero__image" src="images/laptop.svg" alt="Серебристый ноутбук Vector S14" width="800" height="600">
+          <p class="hero__caption">Vector S14 · 14″ · 16 / 512 ГБ · 54 990 ₽</p>
+        </div>
+      </section>
+      <section class="section" id="popular">
+        <div class="section__heading">
+          <div>
+            <p class="eyebrow">Наша подборка</p>
+            <h2>Популярные модели</h2>
+          </div>
+          <a href="catalog.html">Весь каталог →</a>
+        </div>
+        <div class="products-grid">
+          <article class="product-card">
+            <img class="product-card__image" src="images/laptop.svg" alt="Ноутбук Vector S14" width="800" height="600" loading="lazy">
+            <span class="product-card__badge">В наличии</span>
+            <p class="product-card__category">Ноутбуки</p>
+            <h3 class="product-card__title">
+              <a href="product.html">Ноутбук Vector S14</a>
+            </h3>
+            <p class="product-card__description">Компактный ноутбук для документов, занятий и видеовстреч.</p>
+            <ul class="product-card__specs">
+              <li>14 дюймов, IPS, 1920 × 1080</li>
+              <li>6 ядер, до 4,2 ГГц</li>
+              <li>16 ГБ</li>
+            </ul>
+            <p class="product-card__price">54 990 ₽ </p>
+            <div class="product-card__actions">
+              <a class="button" href="product.html">Подробнее</a>
+              <a class="button button--secondary" href="order.html?product=s14">Оформить заявку</a>
+              <button class="button button--secondary" type="button">Добавить в корзину</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img class="product-card__image" src="images/phone.svg" alt="Смартфон Nova N6" width="800" height="600" loading="lazy">
+            <span class="product-card__badge">В наличии</span>
+            <p class="product-card__category">Смартфоны</p>
+            <h3 class="product-card__title">
+              <a href="product-phone.html">Смартфон Nova N6</a>
+            </h3>
+            <p class="product-card__description">Плавный AMOLED-экран и память для ваших фотографий.</p>
+            <ul class="product-card__specs">
+              <li>6,4 дюйма, AMOLED, 2400 × 1080</li>
+              <li>120 Гц</li>
+              <li>8 ГБ</li>
+            </ul>
+            <p class="product-card__price">29 990 ₽ </p>
+            <div class="product-card__actions">
+              <a class="button" href="product-phone.html">Подробнее</a>
+              <a class="button button--secondary" href="order.html?product=n6">Оформить заявку</a>
+              <button class="button button--secondary" type="button">Добавить в корзину</button>
+            </div>
+          </article>
+          <article class="product-card product-card--discount">
+            <img class="product-card__image" src="images/headphones.svg" alt="Наушники Sound A1" width="800" height="600" loading="lazy">
+            <span class="product-card__badge">Скидка</span>
+            <p class="product-card__category">Наушники</p>
+            <h3 class="product-card__title">
+              <a href="product-headphones.html">Наушники Sound A1</a>
+            </h3>
+            <p class="product-card__description">Беспроводные наушники с шумоподавлением и мягкими амбушюрами.</p>
+            <ul class="product-card__specs">
+              <li>Полноразмерные, беспроводные</li>
+              <li>Bluetooth 5.3, кабель 3,5 мм</li>
+              <li>До 40 часов без шумоподавления</li>
+            </ul>
+            <p class="product-card__price">7 990 ₽ <del class="product-card__old-price">9 990 ₽</del>
+            </p>
+            <div class="product-card__actions">
+              <a class="button" href="product-headphones.html">Подробнее</a>
+              <a class="button button--secondary" href="order.html?product=a1">Оформить заявку</a>
+              <button class="button button--secondary" type="button">Добавить в корзину</button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="advantages">
+        <p class="eyebrow">Покупка без лишних шагов</p>
+        <h2>Всё важное перед выбором</h2>
+        <div class="benefits">
+          <article class="benefit">
+            <span class="benefit__number">01 / ХАРАКТЕРИСТИКИ</span>
+            <h3>Понятно о технике</h3>
+            <p>Сравнивайте экраны, память и автономность в таблицах характеристик.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit__number">02 / ПОЛУЧЕНИЕ</span>
+            <h3>Как вам удобно</h3>
+            <p>Выбирайте самовывоз или доставку и заранее знакомьтесь с условиями.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit__number">03 / ЗАЯВКА</span>
+            <h3>В одном месте</h3>
+            <p>Оформляйте заявку и просматривайте предыдущие заказы в разделе «Заявки».</p>
+          </article>
+        </div>
+      </section>
+      <aside class="help-banner section" id="contacts">
+        <div>
+          <h2>Уже выбрали модель?</h2>
+          <p>Оставьте контактные данные — мы уточним детали получения заказа.</p>
+        </div>
+        <a class="button" href="order.html">Оформить заявку</a>
+      </aside>
+      <section class="section faq" id="faq">
+        <p class="eyebrow">Перед заказом</p>
+        <h2>Частые вопросы</h2>
+        <details class="faq__item">
+          <summary class="faq__question">Где посмотреть характеристики?</summary>
+          <p class="faq__answer">Откройте товар кнопкой «Подробнее». На странице есть таблица параметров и комплектация.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Можно ли забрать товар самостоятельно?</summary>
+          <p class="faq__answer">Да, выберите самовывоз при оформлении заявки. Адрес и часы работы указаны в <a href="contacts.html">контактах</a>.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Как уточнить информацию по заказу?</summary>
+          <p class="faq__answer">Откройте форму обращения на странице контактов и укажите номер заявки.</p>
+        </details>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div>
+            <a class="site-header__logo" href="index.html">ДораТехно</a>
+            <p class="muted">Техника, которую легко выбрать.</p>
+          </div>
+          <nav class="site-footer__links" aria-label="Ссылки в подвале">
+            <a href="catalog.html">Каталог</a>
+            <a href="order.html">Мои заявки</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="contacts.html">Контакты</a>
+          </nav>
+        </div>
+        <p class="site-footer__note">© 2026 ДораТехно. Магазин электронной техники.</p>
+      </div>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Наверх">↑</a>
+  </body>
 </html>

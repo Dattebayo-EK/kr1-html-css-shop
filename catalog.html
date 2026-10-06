@@ -1,126 +1,567 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
-
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="index.html#advantages">Преимущества</a></li>
-          <li><a href="index.html#popular">Популярные товары</a></li>
-          <li><a href="index.html#contacts">Обратная связь</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html">Главная</a>
-      <span>Каталог</span>
-    </nav>
-
-    <section class="section">
-      <h1>Каталог товаров</h1>
-      <p>
-        На этой странице представлены товары учебного интернет-магазина.
-        Фильтры пока являются статическим учебным макетом и не изменяют список товаров.
-      </p>
-    </section>
-
-    <section class="catalog-layout" aria-label="Фильтры и товары">
-      <aside class="catalog-filters">
-        <h2>Фильтры</h2>
-
-        <form class="filters-form" action="#" method="get">
-          <fieldset>
-            <legend>Категория</legend>
-
-            <label>
-              <input type="checkbox" name="category" value="all">
-              Все товары
-            </label>
-
-            <label>
-              <input type="checkbox" name="category" value="popular">
-              Популярные
-            </label>
-
-            <label>
-              <input type="checkbox" name="category" value="new">
-              Новинки
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Цена</legend>
-
-            <label for="price-from">От</label>
-            <input
-              id="price-from"
-              name="price-from"
-              type="number"
-              min="0"
-              placeholder="0"
-            >
-
-            <label for="price-to">До</label>
-            <input
-              id="price-to"
-              name="price-to"
-              type="number"
-              min="0"
-              placeholder="5000"
-            >
-          </fieldset>
-
-          <button class="button" type="submit">Применить</button>
-        </form>
-      </aside>
-
-      <section class="catalog-products">
-        <h2>Список товаров</h2>
-
-        <div class="products-grid">
-          <article class="product-card">
-            <h3>Товар 1</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 1000 руб.</p>
-            <a class="button" href="index.html#popular">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3>Товар 2</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 1500 руб.</p>
-            <a class="button" href="index.html#popular">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3>Товар 3</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 2000 руб.</p>
-            <a class="button" href="index.html#popular">Подробнее</a>
-          </article>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Выберите раздел: смартфоны, наушники или ноутбуки. Девять моделей с подробными характеристиками.">
+    <title>Каталог техники — ДораТехно</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header" id="top">
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="site-header__logo" href="index.html">
+            <span class="site-header__mark" aria-hidden="true">Д</span>ДораТехно</a>
+          <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="cart.html">Корзина</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="order.html">Заявки</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="delivery.html">Доставка</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
+    </header>
+    <main class="container" id="main">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a>
+        <span class="breadcrumbs__current" aria-current="page">Каталог</span>
+      </nav>
+      <section class="page-heading">
+        <p class="eyebrow">9 моделей / 3 категории</p>
+        <h1>Выберите свою технику</h1>
+        <p>Откройте нужный раздел, сравните характеристики и выберите подходящую модель.</p>
       </section>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
-</body>
+      <nav class="category-list" aria-label="Категории товаров">
+        <a class="category-list__link" href="catalog.html#phones">Смартфоны<span>3 модели →</span>
+        </a>
+        <a class="category-list__link" href="catalog.html#audio">Наушники<span>3 модели →</span>
+        </a>
+        <a class="category-list__link" href="catalog.html#notebooks">Ноутбуки<span>3 модели →</span>
+        </a>
+      </nav>
+      <section class="catalog-category section" id="phones">
+        <div class="section__heading">
+          <h2>Смартфоны</h2>
+          <p class="muted">3 модели</p>
+        </div>
+        <div class="catalog-layout">
+          <aside class="catalog-filters" aria-labelledby="phones-filter-title">
+            <h3 class="catalog-filters__title" id="phones-filter-title">Фильтры</h3>
+            <div class="filters-form">
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Цена, ₽</legend>
+                <div class="filters-form__range">
+                  <div>
+                    <label class="filters-form__label" for="phones-price-from">От</label>
+                    <input class="filters-form__input" id="phones-price-from" name="price-from" type="number" min="0" placeholder="0">
+                  </div>
+                  <div>
+                    <label class="filters-form__label" for="phones-price-to">До</label>
+                    <input class="filters-form__input" id="phones-price-to" name="price-to" type="number" min="0" placeholder="100000">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Тип экрана</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="phones-screen-amoled" name="screen" type="checkbox" value="amoled">
+                    <label for="phones-screen-amoled">AMOLED</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="phones-screen-ips" name="screen" type="checkbox" value="ips">
+                    <label for="phones-screen-ips">IPS</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Оперативная память</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="phones-ram-6" name="ram" type="checkbox" value="6">
+                    <label for="phones-ram-6">6 ГБ</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="phones-ram-8" name="ram" type="checkbox" value="8">
+                    <label for="phones-ram-8">8 ГБ</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="phones-ram-12" name="ram" type="checkbox" value="12">
+                    <label for="phones-ram-12">12 ГБ</label>
+                  </div>
+                </div>
+              </fieldset>
+              <button class="button" type="button" disabled>Применить</button>
+            </div>
+          </aside>
+          <div class="catalog-products">
+            <div class="products-grid">
+              <article class="product-card">
+                <img class="product-card__image" src="images/phone.svg" alt="Смартфон Nova N6" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
+                <p class="product-card__category">Смартфоны</p>
+                <h3 class="product-card__title">
+                  <a href="product-phone.html">Смартфон Nova N6</a>
+                </h3>
+                <p class="product-card__description">Плавный AMOLED-экран и память для ваших фотографий.</p>
+                <ul class="product-card__specs">
+                  <li>6,4 дюйма, AMOLED, 2400 × 1080</li>
+                  <li>120 Гц</li>
+                  <li>8 ГБ</li>
+                </ul>
+                <p class="product-card__price">29 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-phone.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=n6">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-card__image" src="images/phone-lite.svg" alt="Смартфон Nova Lite" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
+                <p class="product-card__category">Смартфоны</p>
+                <h3 class="product-card__title">
+                  <a href="product-nova-lite.html">Смартфон Nova Lite</a>
+                </h3>
+                <p class="product-card__description">Всё необходимое для связи, навигации и любимых приложений.</p>
+                <ul class="product-card__specs">
+                  <li>6,5 дюйма, IPS, 2400 × 1080</li>
+                  <li>90 Гц</li>
+                  <li>6 ГБ</li>
+                </ul>
+                <p class="product-card__price">19 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-nova-lite.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=n5">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-card__image" src="images/phone-pro.svg" alt="Смартфон Nova Pro" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">Новинка</span>
+                <p class="product-card__category">Смартфоны</p>
+                <h3 class="product-card__title">
+                  <a href="product-nova-pro.html">Смартфон Nova Pro</a>
+                </h3>
+                <p class="product-card__description">Детальные фотографии и большой запас памяти.</p>
+                <ul class="product-card__specs">
+                  <li>6,7 дюйма, AMOLED, 2800 × 1260</li>
+                  <li>120 Гц</li>
+                  <li>12 ГБ</li>
+                </ul>
+                <p class="product-card__price">49 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-nova-pro.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=n8">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <section class="section category-comparison">
+          <h3>Сравнение моделей</h3>
+          <div class="table-wrap">
+            <table class="spec-table">
+              <caption>Смартфоны: основные параметры и цены</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Модель</th>
+                  <th scope="col">Экран</th>
+                  <th scope="col">Оперативная память</th>
+                  <th scope="col">Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <a href="product-phone.html">Смартфон Nova N6</a>
+                  </th>
+                  <td>6,4 дюйма, AMOLED, 2400 × 1080</td>
+                  <td>8 ГБ</td>
+                  <td>29 990 ₽</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <a href="product-nova-lite.html">Смартфон Nova Lite</a>
+                  </th>
+                  <td>6,5 дюйма, IPS, 2400 × 1080</td>
+                  <td>6 ГБ</td>
+                  <td>19 990 ₽</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <a href="product-nova-pro.html">Смартфон Nova Pro</a>
+                  </th>
+                  <td>6,7 дюйма, AMOLED, 2800 × 1260</td>
+                  <td>12 ГБ</td>
+                  <td>49 990 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+      <section class="catalog-category section" id="audio">
+        <div class="section__heading">
+          <h2>Наушники</h2>
+          <p class="muted">3 модели</p>
+        </div>
+        <div class="catalog-layout">
+          <aside class="catalog-filters" aria-labelledby="audio-filter-title">
+            <h3 class="catalog-filters__title" id="audio-filter-title">Фильтры</h3>
+            <div class="filters-form">
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Цена, ₽</legend>
+                <div class="filters-form__range">
+                  <div>
+                    <label class="filters-form__label" for="audio-price-from">От</label>
+                    <input class="filters-form__input" id="audio-price-from" name="price-from" type="number" min="0" placeholder="0">
+                  </div>
+                  <div>
+                    <label class="filters-form__label" for="audio-price-to">До</label>
+                    <input class="filters-form__input" id="audio-price-to" name="price-to" type="number" min="0" placeholder="100000">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Активное шумоподавление</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="audio-noise-yes" name="noise-cancelling" type="checkbox" value="yes">
+                    <label for="audio-noise-yes">Есть</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="audio-noise-no" name="noise-cancelling" type="checkbox" value="no">
+                    <label for="audio-noise-no">Нет</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Автономность</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="audio-hours-30" name="battery-hours" type="checkbox" value="30">
+                    <label for="audio-hours-30">30 часов</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="audio-hours-40" name="battery-hours" type="checkbox" value="40">
+                    <label for="audio-hours-40">40 часов</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="audio-hours-60" name="battery-hours" type="checkbox" value="60">
+                    <label for="audio-hours-60">60 часов</label>
+                  </div>
+                </div>
+              </fieldset>
+              <button class="button" type="button" disabled>Применить</button>
+            </div>
+          </aside>
+          <div class="catalog-products">
+            <div class="products-grid">
+              <article class="product-card product-card--discount">
+                <img class="product-card__image" src="images/headphones.svg" alt="Наушники Sound A1" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">Скидка</span>
+                <p class="product-card__category">Наушники</p>
+                <h3 class="product-card__title">
+                  <a href="product-headphones.html">Наушники Sound A1</a>
+                </h3>
+                <p class="product-card__description">Беспроводные наушники с шумоподавлением и мягкими амбушюрами.</p>
+                <ul class="product-card__specs">
+                  <li>Полноразмерные, беспроводные</li>
+                  <li>Bluetooth 5.3, кабель 3,5 мм</li>
+                  <li>До 40 часов без шумоподавления</li>
+                </ul>
+                <p class="product-card__price">7 990 ₽ <del class="product-card__old-price">9 990 ₽</del>
+                </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-headphones.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=a1">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-card__image" src="images/headphones-lite.svg" alt="Наушники Sound Lite" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
+                <p class="product-card__category">Наушники</p>
+                <h3 class="product-card__title">
+                  <a href="product-sound-lite.html">Наушники Sound Lite</a>
+                </h3>
+                <p class="product-card__description">Лёгкие беспроводные наушники для прогулок и подкастов.</p>
+                <ul class="product-card__specs">
+                  <li>Полноразмерные, складные</li>
+                  <li>Bluetooth 5.3</li>
+                  <li>До 30 часов</li>
+                </ul>
+                <p class="product-card__price">4 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-sound-lite.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=a2">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-card__image" src="images/headphones-pro.svg" alt="Наушники Sound Pro" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">Новинка</span>
+                <p class="product-card__category">Наушники</p>
+                <h3 class="product-card__title">
+                  <a href="product-sound-pro.html">Наушники Sound Pro</a>
+                </h3>
+                <p class="product-card__description">До 60 часов музыки и активное шумоподавление.</p>
+                <ul class="product-card__specs">
+                  <li>Полноразмерные</li>
+                  <li>Bluetooth 5.4</li>
+                  <li>До 60 часов</li>
+                </ul>
+                <p class="product-card__price">12 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-sound-pro.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=a3">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <section class="section category-comparison">
+          <h3>Сравнение моделей</h3>
+          <div class="table-wrap">
+            <table class="spec-table">
+              <caption>Наушники: основные параметры и цены</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Модель</th>
+                  <th scope="col">Тип</th>
+                  <th scope="col">Время работы</th>
+                  <th scope="col">Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <a href="product-headphones.html">Наушники Sound A1</a>
+                  </th>
+                  <td>Полноразмерные, беспроводные</td>
+                  <td>До 40 часов без шумоподавления</td>
+                  <td>7 990 ₽</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <a href="product-sound-lite.html">Наушники Sound Lite</a>
+                  </th>
+                  <td>Полноразмерные, складные</td>
+                  <td>До 30 часов</td>
+                  <td>4 990 ₽</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <a href="product-sound-pro.html">Наушники Sound Pro</a>
+                  </th>
+                  <td>Полноразмерные</td>
+                  <td>До 60 часов</td>
+                  <td>12 990 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+      <section class="catalog-category section" id="notebooks">
+        <div class="section__heading">
+          <h2>Ноутбуки</h2>
+          <p class="muted">3 модели</p>
+        </div>
+        <div class="catalog-layout">
+          <aside class="catalog-filters" aria-labelledby="notebooks-filter-title">
+            <h3 class="catalog-filters__title" id="notebooks-filter-title">Фильтры</h3>
+            <div class="filters-form">
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Цена, ₽</legend>
+                <div class="filters-form__range">
+                  <div>
+                    <label class="filters-form__label" for="notebooks-price-from">От</label>
+                    <input class="filters-form__input" id="notebooks-price-from" name="price-from" type="number" min="0" placeholder="0">
+                  </div>
+                  <div>
+                    <label class="filters-form__label" for="notebooks-price-to">До</label>
+                    <input class="filters-form__input" id="notebooks-price-to" name="price-to" type="number" min="0" placeholder="100000">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Диагональ экрана</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="notebooks-screen-compact" name="screen-size" type="checkbox" value="compact">
+                    <label for="notebooks-screen-compact">До 14 дюймов</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="notebooks-screen-large" name="screen-size" type="checkbox" value="large">
+                    <label for="notebooks-screen-large">16 дюймов</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Оперативная память</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="notebooks-ram-16" name="ram" type="checkbox" value="16">
+                    <label for="notebooks-ram-16">16 ГБ</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="notebooks-ram-32" name="ram" type="checkbox" value="32">
+                    <label for="notebooks-ram-32">32 ГБ</label>
+                  </div>
+                </div>
+              </fieldset>
+              <button class="button" type="button" disabled>Применить</button>
+            </div>
+          </aside>
+          <div class="catalog-products">
+            <div class="products-grid">
+              <article class="product-card">
+                <img class="product-card__image" src="images/laptop.svg" alt="Ноутбук Vector S14" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
+                <p class="product-card__category">Ноутбуки</p>
+                <h3 class="product-card__title">
+                  <a href="product.html">Ноутбук Vector S14</a>
+                </h3>
+                <p class="product-card__description">Компактный ноутбук для документов, занятий и видеовстреч.</p>
+                <ul class="product-card__specs">
+                  <li>14 дюймов, IPS, 1920 × 1080</li>
+                  <li>6 ядер, до 4,2 ГГц</li>
+                  <li>16 ГБ</li>
+                </ul>
+                <p class="product-card__price">54 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=s14">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-card__image" src="images/laptop-s16.svg" alt="Ноутбук Vector S16" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
+                <p class="product-card__category">Ноутбуки</p>
+                <h3 class="product-card__title">
+                  <a href="product-vector-s16.html">Ноутбук Vector S16</a>
+                </h3>
+                <p class="product-card__description">Большой экран и 1 ТБ памяти для работы с проектами.</p>
+                <ul class="product-card__specs">
+                  <li>16 дюймов, IPS, 2560 × 1600</li>
+                  <li>8 ядер, до 4,5 ГГц</li>
+                  <li>32 ГБ</li>
+                </ul>
+                <p class="product-card__price">74 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-vector-s16.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=s16">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-card__image" src="images/laptop-air13.svg" alt="Ноутбук Vector Air 13" width="800" height="600" loading="lazy">
+                <span class="product-card__badge">Новинка</span>
+                <p class="product-card__category">Ноутбуки</p>
+                <h3 class="product-card__title">
+                  <a href="product-vector-air13.html">Ноутбук Vector Air 13</a>
+                </h3>
+                <p class="product-card__description">Лёгкая модель с длительной автономностью для поездок.</p>
+                <ul class="product-card__specs">
+                  <li>13,3 дюйма, IPS, 2560 × 1600</li>
+                  <li>6 ядер, до 4,0 ГГц</li>
+                  <li>16 ГБ</li>
+                </ul>
+                <p class="product-card__price">64 990 ₽ </p>
+                <div class="product-card__actions">
+                  <a class="button" href="product-vector-air13.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=air13">Оформить заявку</a>
+                  <button class="button button--secondary" type="button">Добавить в корзину</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <section class="section category-comparison">
+          <h3>Сравнение моделей</h3>
+          <div class="table-wrap">
+            <table class="spec-table">
+              <caption>Ноутбуки: основные параметры и цены</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Модель</th>
+                  <th scope="col">Экран</th>
+                  <th scope="col">Оперативная память</th>
+                  <th scope="col">Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <a href="product.html">Ноутбук Vector S14</a>
+                  </th>
+                  <td>14 дюймов, IPS, 1920 × 1080</td>
+                  <td>16 ГБ</td>
+                  <td>54 990 ₽</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <a href="product-vector-s16.html">Ноутбук Vector S16</a>
+                  </th>
+                  <td>16 дюймов, IPS, 2560 × 1600</td>
+                  <td>32 ГБ</td>
+                  <td>74 990 ₽</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <a href="product-vector-air13.html">Ноутбук Vector Air 13</a>
+                  </th>
+                  <td>13,3 дюйма, IPS, 2560 × 1600</td>
+                  <td>16 ГБ</td>
+                  <td>64 990 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div>
+            <a class="site-header__logo" href="index.html">ДораТехно</a>
+            <p class="muted">Техника, которую легко выбрать.</p>
+          </div>
+          <nav class="site-footer__links" aria-label="Ссылки в подвале">
+            <a href="catalog.html">Каталог</a>
+            <a href="order.html">Мои заявки</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="contacts.html">Контакты</a>
+          </nav>
+        </div>
+        <p class="site-footer__note">© 2026 ДораТехно. Магазин электронной техники.</p>
+      </div>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Наверх">↑</a>
+  </body>
 </html>

@@ -1,74 +1,68 @@
-// Получаем модальное окно по id.
-const orderDialog = document.getElementById('order-dialog');
+const productSelect = document.getElementById('page-product');
+const requestedProduct = new URLSearchParams(window.location.search).get('product');
 
-// Получаем все кнопки заказа в карточках товаров.
-const orderButtons = document.querySelectorAll('.product-card__button');
+const backToTop = document.querySelector('.back-to-top');
 
-// Получаем кнопку закрытия модального окна.
-const closeDialogButton = document.getElementById('close-order-dialog');
-
-// Получаем скрытое поле, в которое будет записан выбранный товар.
-const selectedProductInput = document.getElementById('selected-product');
-
-// Перебираем все кнопки «Заказать».
-orderButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    // Получаем название товара из data-атрибута.
-    const productName = button.dataset.product;
-
-    // Записываем название товара в скрытое поле формы.
-    selectedProductInput.value = productName;
-
-    // Открываем модальное окно.
-    orderDialog.showModal();
+if (backToTop && document.querySelector('.catalog-category')) {
+  backToTop.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.scrollTo(0, 0);
   });
-});
+}
 
-// Закрываем модальное окно по кнопке «Закрыть».
-closeDialogButton.addEventListener('click', () => {
-  orderDialog.close();
-});
+if (productSelect && requestedProduct) {
+  for (const option of productSelect.options) {
+    if (option.value === requestedProduct) {
+      productSelect.value = requestedProduct;
+      break;
+    }
+  }
+}
 
-// Получаем форму заявки.
-const orderForm = document.getElementById('order-form');
+const requestDialog = document.getElementById('request-dialog');
 
-// Получаем сообщение об успешной отправке.
-const successMessage = document.getElementById('success-message');
+if (requestDialog) {
+  document.getElementById('open-request-dialog').addEventListener('click', function () {
+    document.getElementById('request-result').hidden = true;
+    requestDialog.showModal();
+  });
 
-// Обрабатываем отправку формы.
-orderForm.addEventListener('submit', (event) => {
-  // Отменяем стандартную отправку формы,
-  // потому что backend пока не подключён.
-  event.preventDefault();
+  document.getElementById('close-request-dialog').addEventListener('click', function () {
+    requestDialog.close();
+  });
+}
 
-  // Сбрасываем предыдущие признаки ошибок.
-  const formElements = Array.from(orderForm.elements);
+const form = document.querySelector('[data-order-form]');
 
-  formElements.forEach((element) => {
-    if (element.willValidate) {
-      element.removeAttribute('aria-invalid');
+if (form) {
+  const result = document.getElementById(form.dataset.result);
+
+  form.addEventListener('input', function (event) {
+    result.hidden = true;
+    if (event.target.willValidate && event.target.checkValidity()) {
+      event.target.removeAttribute('aria-invalid');
     }
   });
 
-  // Проверяем встроенные HTML-ограничения формы.
-  if (!orderForm.checkValidity()) {
-    formElements.forEach((element) => {
-      if (element.willValidate && !element.checkValidity()) {
-        element.setAttribute('aria-invalid', 'true');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    result.hidden = true;
+    for (const field of form.elements) {
+      field.removeAttribute('aria-invalid');
+      if (field.willValidate && !field.checkValidity()) {
+        field.setAttribute('aria-invalid', 'true');
       }
-    });
+    }
 
-    // Показываем стандартные сообщения браузера.
-    orderForm.reportValidity();
-    return;
-  }
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
-  // Показываем сообщение об успешной отправке.
-  successMessage.hidden = false;
-
-  // Очищаем форму.
-  orderForm.reset();
-
-  // Закрываем модальное окно.
-  orderDialog.close();
-});
+    form.reset();
+    if (requestDialog) requestDialog.close();
+    result.hidden = false;
+    result.focus();
+    result.scrollIntoView({ block: 'center' });
+  });
+}
