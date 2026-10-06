@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Состав корзины, стоимость товаров и переход к оформлению заявки в ДораТехно.">
+    <title>Корзина — ДораТехно</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header" id="top">
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="site-header__logo" href="index.html">
+            <span class="site-header__mark" aria-hidden="true">Д</span>ДораТехно</a>
+          <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link site-nav__link--active" href="cart.html" aria-current="page">Корзина</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="order.html">Заявки</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="delivery.html">Доставка</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="container" id="main">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a>
+        <span class="breadcrumbs__current" aria-current="page">Корзина</span>
+      </nav>
+      <section class="page-heading">
+        <h1>Корзина</h1>
+        <p>Проверьте состав заказа и перейдите к оформлению заявки.</p>
+      </section>
+      <div class="order-layout section">
+        <section class="cart-list" aria-label="Товары в корзине">
+          <article class="cart-item">
+            <a class="cart-item__image" href="product.html">
+              <img src="images/laptop.svg" alt="Ноутбук Vector S14" width="800" height="600">
+            </a>
+            <div>
+              <h2 class="cart-item__title">
+                <a href="product.html">Ноутбук Vector S14</a>
+              </h2>
+              <p class="muted">В наличии</p>
+              <label class="cart-item__quantity-label" for="quantity-s14">Количество</label>
+              <input class="cart-item__quantity" id="quantity-s14" name="quantity-s14" type="number" value="1" min="1" max="10" readonly>
+            </div>
+            <p class="cart-item__price">54 990 ₽</p>
+          </article>
+          <article class="cart-item">
+            <a class="cart-item__image" href="product-phone.html">
+              <img src="images/phone.svg" alt="Смартфон Nova N6" width="800" height="600">
+            </a>
+            <div>
+              <h2 class="cart-item__title">
+                <a href="product-phone.html">Смартфон Nova N6</a>
+              </h2>
+              <p class="muted">В наличии</p>
+              <label class="cart-item__quantity-label" for="quantity-n6">Количество</label>
+              <input class="cart-item__quantity" id="quantity-n6" name="quantity-n6" type="number" value="1" min="1" max="10" readonly>
+            </div>
+            <p class="cart-item__price">29 990 ₽</p>
+          </article>
+          <article class="cart-item">
+            <a class="cart-item__image" href="product-headphones.html">
+              <img src="images/headphones.svg" alt="Наушники Sound A1" width="800" height="600">
+            </a>
+            <div>
+              <h2 class="cart-item__title">
+                <a href="product-headphones.html">Наушники Sound A1</a>
+              </h2>
+              <p class="muted">В наличии</p>
+              <label class="cart-item__quantity-label" for="quantity-a1">Количество</label>
+              <input class="cart-item__quantity" id="quantity-a1" name="quantity-a1" type="number" value="1" min="1" max="10" readonly>
+            </div>
+            <p class="cart-item__price">7 990 ₽</p>
+          </article>
+        </section>
+        <aside class="order-info">
+          <h2>Ваш заказ</h2>
+          <dl class="order-totals">
+            <div>
+              <dt>Товары, 3 шт.</dt>
+              <dd>92 970 ₽</dd>
+            </div>
+            <div>
+              <dt>Самовывоз</dt>
+              <dd>Бесплатно</dd>
+            </div>
+            <div class="order-totals__total">
+              <dt>Итого</dt>
+              <dd>92 970 ₽</dd>
+            </div>
+          </dl>
+          <p class="muted">Стоимость доставки зависит от выбранного способа получения и уточняется при подтверждении заявки.</p>
+          <a class="button" href="order.html?product=cart">Оформить заявку</a>
+          <p class="order-info__link">
+            <a href="catalog.html">Продолжить выбор →</a>
+          </p>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div>
+            <a class="site-header__logo" href="index.html">ДораТехно</a>
+            <p class="muted">Техника, которую легко выбрать.</p>
+          </div>
+          <nav class="site-footer__links" aria-label="Ссылки в подвале">
+            <a href="catalog.html">Каталог</a>
+            <a href="order.html">Мои заявки</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="contacts.html">Контакты</a>
+          </nav>
+        </div>
+        <p class="site-footer__note">© 2026 ДораТехно. Магазин электронной техники.</p>
+      </div>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Наверх">↑</a>
+  </body>
+</html>
