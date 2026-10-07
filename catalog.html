@@ -67,111 +67,68 @@
           <aside class="catalog-filters" aria-labelledby="phones-filter-title">
             <h3 class="catalog-filters__title" id="phones-filter-title">Фильтры</h3>
             <div class="filters-form">
-              <fieldset class="filters-form__group">
-                <legend class="filters-form__legend">Цена, ₽</legend>
-                <div class="filters-form__range">
-                  <div>
-                    <label class="filters-form__label" for="phones-price-from">От</label>
-                    <input class="filters-form__input" id="phones-price-from" name="price-from" type="number" min="0" placeholder="0">
-                  </div>
-                  <div>
-                    <label class="filters-form__label" for="phones-price-to">До</label>
-                    <input class="filters-form__input" id="phones-price-to" name="price-to" type="number" min="0" placeholder="100000">
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="filters-form__group">
-                <legend class="filters-form__legend">Тип экрана</legend>
-                <div class="filters-form__options">
-                  <div class="filters-form__option">
-                    <input id="phones-screen-amoled" name="screen" type="checkbox" value="amoled">
-                    <label for="phones-screen-amoled">AMOLED</label>
-                  </div>
-                  <div class="filters-form__option">
-                    <input id="phones-screen-ips" name="screen" type="checkbox" value="ips">
-                    <label for="phones-screen-ips">IPS</label>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="filters-form__group">
-                <legend class="filters-form__legend">Оперативная память</legend>
-                <div class="filters-form__options">
-                  <div class="filters-form__option">
-                    <input id="phones-ram-6" name="ram" type="checkbox" value="6">
-                    <label for="phones-ram-6">6 ГБ</label>
-                  </div>
-                  <div class="filters-form__option">
-                    <input id="phones-ram-8" name="ram" type="checkbox" value="8">
-                    <label for="phones-ram-8">8 ГБ</label>
-                  </div>
-                  <div class="filters-form__option">
-                    <input id="phones-ram-12" name="ram" type="checkbox" value="12">
-                    <label for="phones-ram-12">12 ГБ</label>
-                  </div>
-                </div>
-              </fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Цена, ₽</legend><div class="filters-form__range"><div><label class="filters-form__label" for="phones-price-from">От</label><input class="filters-form__input" id="phones-price-from" type="number" min="0" placeholder="0"></div><div><label class="filters-form__label" for="phones-price-to">До</label><input class="filters-form__input" id="phones-price-to" type="number" min="0" placeholder="100000"></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Диагональ экрана</legend><div class="filters-form__options"><div class="filters-form__option"><input id="phones-size-small" type="checkbox"><label for="phones-size-small">До 6,1 дюйма</label></div><div class="filters-form__option"><input id="phones-size-large" type="checkbox"><label for="phones-size-large">От 6,7 дюйма</label></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Встроенная память</legend><div class="filters-form__options"><div class="filters-form__option"><input id="phones-storage-128" type="checkbox"><label for="phones-storage-128">128 ГБ</label></div><div class="filters-form__option"><input id="phones-storage-512" type="checkbox"><label for="phones-storage-512">512 ГБ</label></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Производитель</legend><div class="filters-form__options"><div class="filters-form__option"><input id="phones-brand-google" type="checkbox"><label for="phones-brand-google">Google</label></div><div class="filters-form__option"><input id="phones-brand-apple" type="checkbox"><label for="phones-brand-apple">Apple</label></div><div class="filters-form__option"><input id="phones-brand-samsung" type="checkbox"><label for="phones-brand-samsung">Samsung</label></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Операционная система</legend><div class="filters-form__options"><div class="filters-form__option"><input id="phones-os-android" type="checkbox"><label for="phones-os-android">Android</label></div><div class="filters-form__option"><input id="phones-os-ios" type="checkbox"><label for="phones-os-ios">iOS</label></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Особенности</legend><div class="filters-form__options"><div class="filters-form__option"><input id="phones-feature-5g" type="checkbox"><label for="phones-feature-5g">Поддержка 5G</label></div><div class="filters-form__option"><input id="phones-feature-nfc" type="checkbox"><label for="phones-feature-nfc">Поддержка NFC</label></div></div></fieldset>
               <button class="button" type="button" disabled>Применить</button>
             </div>
           </aside>
           <div class="catalog-products">
             <div class="products-grid">
               <article class="product-card">
-                <img class="product-card__image" src="images/phone.svg" alt="Смартфон Nova N6" width="800" height="600" loading="lazy">
+                <img class="product-card__image product-card__image--contain" src="images/google-pixel-7-pro.jpg" alt="Google Pixel 7 Pro 12/128 ГБ" width="960" height="561" loading="lazy">
                 <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Смартфоны</p>
-                <h3 class="product-card__title">
-                  <a href="product-phone.html">Смартфон Nova N6</a>
-                </h3>
-                <p class="product-card__description">Плавный AMOLED-экран и память для ваших фотографий.</p>
+                <h3 class="product-card__title"><a href="product-pixel-7-pro.html">Google Pixel 7 Pro 12/128 ГБ</a></h3>
+                <p class="product-card__description">Смартфон Google с камерой 50 Мп, экраном 120 Гц и чипом Tensor G2.</p>
                 <ul class="product-card__specs">
-                  <li>6,4 дюйма, AMOLED, 2400 × 1080</li>
-                  <li>120 Гц</li>
-                  <li>8 ГБ</li>
+                  <li>6,7″, LTPO OLED, 3120 × 1440</li>
+                  <li>120 Гц, Google Tensor G2</li>
+                  <li>12 ГБ / 128 ГБ</li>
                 </ul>
-                <p class="product-card__price">29 990 ₽ </p>
+                <p class="product-card__price">39 990 ₽</p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-phone.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=n6">Оформить заявку</a>
+                  <a class="button" href="product-pixel-7-pro.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=pixel-7-pro">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
               <article class="product-card">
-                <img class="product-card__image" src="images/phone-lite.svg" alt="Смартфон Nova Lite" width="800" height="600" loading="lazy">
+                <img class="product-card__image" src="images/iphone-13-pro-blue.jpg" alt="iPhone 13 Pro 128 ГБ" width="960" height="1200" loading="lazy">
                 <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Смартфоны</p>
-                <h3 class="product-card__title">
-                  <a href="product-nova-lite.html">Смартфон Nova Lite</a>
-                </h3>
-                <p class="product-card__description">Всё необходимое для связи, навигации и любимых приложений.</p>
+                <h3 class="product-card__title"><a href="product-iphone-13-pro.html">iPhone 13 Pro 128 ГБ</a></h3>
+                <p class="product-card__description">Компактный iPhone с OLED-экраном ProMotion и тройной камерой.</p>
                 <ul class="product-card__specs">
-                  <li>6,5 дюйма, IPS, 2400 × 1080</li>
-                  <li>90 Гц</li>
-                  <li>6 ГБ</li>
+                  <li>6,1″, OLED, 2532 × 1170</li>
+                  <li>ProMotion до 120 Гц, Apple A15</li>
+                  <li>Накопитель 128 ГБ</li>
                 </ul>
-                <p class="product-card__price">19 990 ₽ </p>
+                <p class="product-card__price">44 990 ₽</p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-nova-lite.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=n5">Оформить заявку</a>
+                  <a class="button" href="product-iphone-13-pro.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=iphone-13-pro">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
               <article class="product-card">
-                <img class="product-card__image" src="images/phone-pro.svg" alt="Смартфон Nova Pro" width="800" height="600" loading="lazy">
-                <span class="product-card__badge">Новинка</span>
+                <img class="product-card__image" src="images/galaxy-s23-ultra-lavender.png" alt="Samsung Galaxy S23 Ultra 12/512 ГБ" width="960" height="713" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Смартфоны</p>
-                <h3 class="product-card__title">
-                  <a href="product-nova-pro.html">Смартфон Nova Pro</a>
-                </h3>
-                <p class="product-card__description">Детальные фотографии и большой запас памяти.</p>
+                <h3 class="product-card__title"><a href="product-galaxy-s23-ultra.html">Samsung Galaxy S23 Ultra 12/512 ГБ</a></h3>
+                <p class="product-card__description">Большой AMOLED-экран, камера 200 Мп и встроенное перо S Pen.</p>
                 <ul class="product-card__specs">
-                  <li>6,7 дюйма, AMOLED, 2800 × 1260</li>
-                  <li>120 Гц</li>
-                  <li>12 ГБ</li>
+                  <li>6,8″, Dynamic AMOLED 2X, 3088 × 1440</li>
+                  <li>120 Гц, Snapdragon 8 Gen 2</li>
+                  <li>12 ГБ / 512 ГБ</li>
                 </ul>
-                <p class="product-card__price">49 990 ₽ </p>
+                <p class="product-card__price">89 990 ₽</p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-nova-pro.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=n8">Оформить заявку</a>
+                  <a class="button" href="product-galaxy-s23-ultra.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=galaxy-s23-ultra">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
@@ -187,35 +144,14 @@
                 <tr>
                   <th scope="col">Модель</th>
                   <th scope="col">Экран</th>
-                  <th scope="col">Оперативная память</th>
+                  <th scope="col">Память</th>
                   <th scope="col">Цена</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">
-                    <a href="product-phone.html">Смартфон Nova N6</a>
-                  </th>
-                  <td>6,4 дюйма, AMOLED, 2400 × 1080</td>
-                  <td>8 ГБ</td>
-                  <td>29 990 ₽</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a href="product-nova-lite.html">Смартфон Nova Lite</a>
-                  </th>
-                  <td>6,5 дюйма, IPS, 2400 × 1080</td>
-                  <td>6 ГБ</td>
-                  <td>19 990 ₽</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a href="product-nova-pro.html">Смартфон Nova Pro</a>
-                  </th>
-                  <td>6,7 дюйма, AMOLED, 2800 × 1260</td>
-                  <td>12 ГБ</td>
-                  <td>49 990 ₽</td>
-                </tr>
+                <tr><th scope="row"><a href="product-pixel-7-pro.html">Google Pixel 7 Pro 12/128 ГБ</a></th><td>6,7″, LTPO OLED, 3120 × 1440</td><td>12 ГБ / 128 ГБ</td><td>39 990 ₽</td></tr>
+                <tr><th scope="row"><a href="product-iphone-13-pro.html">iPhone 13 Pro 128 ГБ</a></th><td>6,1″, OLED, 2532 × 1170</td><td>Накопитель 128 ГБ</td><td>44 990 ₽</td></tr>
+                <tr><th scope="row"><a href="product-galaxy-s23-ultra.html">Samsung Galaxy S23 Ultra 12/512 ГБ</a></th><td>6,8″, Dynamic AMOLED 2X, 3088 × 1440</td><td>12 ГБ / 512 ГБ</td><td>89 990 ₽</td></tr>
               </tbody>
             </table>
           </div>
@@ -230,112 +166,67 @@
           <aside class="catalog-filters" aria-labelledby="audio-filter-title">
             <h3 class="catalog-filters__title" id="audio-filter-title">Фильтры</h3>
             <div class="filters-form">
-              <fieldset class="filters-form__group">
-                <legend class="filters-form__legend">Цена, ₽</legend>
-                <div class="filters-form__range">
-                  <div>
-                    <label class="filters-form__label" for="audio-price-from">От</label>
-                    <input class="filters-form__input" id="audio-price-from" name="price-from" type="number" min="0" placeholder="0">
-                  </div>
-                  <div>
-                    <label class="filters-form__label" for="audio-price-to">До</label>
-                    <input class="filters-form__input" id="audio-price-to" name="price-to" type="number" min="0" placeholder="100000">
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="filters-form__group">
-                <legend class="filters-form__legend">Активное шумоподавление</legend>
-                <div class="filters-form__options">
-                  <div class="filters-form__option">
-                    <input id="audio-noise-yes" name="noise-cancelling" type="checkbox" value="yes">
-                    <label for="audio-noise-yes">Есть</label>
-                  </div>
-                  <div class="filters-form__option">
-                    <input id="audio-noise-no" name="noise-cancelling" type="checkbox" value="no">
-                    <label for="audio-noise-no">Нет</label>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="filters-form__group">
-                <legend class="filters-form__legend">Автономность</legend>
-                <div class="filters-form__options">
-                  <div class="filters-form__option">
-                    <input id="audio-hours-30" name="battery-hours" type="checkbox" value="30">
-                    <label for="audio-hours-30">30 часов</label>
-                  </div>
-                  <div class="filters-form__option">
-                    <input id="audio-hours-40" name="battery-hours" type="checkbox" value="40">
-                    <label for="audio-hours-40">40 часов</label>
-                  </div>
-                  <div class="filters-form__option">
-                    <input id="audio-hours-60" name="battery-hours" type="checkbox" value="60">
-                    <label for="audio-hours-60">60 часов</label>
-                  </div>
-                </div>
-              </fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Цена, ₽</legend><div class="filters-form__range"><div><label class="filters-form__label" for="audio-price-from">От</label><input class="filters-form__input" id="audio-price-from" type="number" min="0" placeholder="0"></div><div><label class="filters-form__label" for="audio-price-to">До</label><input class="filters-form__input" id="audio-price-to" type="number" min="0" placeholder="50000"></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Подключение</legend><div class="filters-form__options"><div class="filters-form__option"><input id="audio-wired" type="checkbox"><label for="audio-wired">Проводные</label></div><div class="filters-form__option"><input id="audio-wireless" type="checkbox"><label for="audio-wireless">Беспроводные</label></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Питание</legend><div class="filters-form__options"><div class="filters-form__option"><input id="audio-battery" type="checkbox"><label for="audio-battery">Аккумулятор</label></div><div class="filters-form__option"><input id="audio-aaa" type="checkbox"><label for="audio-aaa">Батарейка AAA</label></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Производитель</legend><div class="filters-form__options"><div class="filters-form__option"><input id="audio-brand-sony" type="checkbox"><label for="audio-brand-sony">Sony</label></div><div class="filters-form__option"><input id="audio-brand-bose" type="checkbox"><label for="audio-brand-bose">Bose</label></div><div class="filters-form__option"><input id="audio-brand-apple" type="checkbox"><label for="audio-brand-apple">Apple</label></div></div></fieldset>
+              <fieldset class="filters-form__group"><legend class="filters-form__legend">Функции</legend><div class="filters-form__options"><div class="filters-form__option"><input id="audio-noise-cancelling" type="checkbox"><label for="audio-noise-cancelling">Шумоподавление</label></div><div class="filters-form__option"><input id="audio-microphone" type="checkbox"><label for="audio-microphone">Встроенный микрофон</label></div></div></fieldset>
               <button class="button" type="button" disabled>Применить</button>
             </div>
           </aside>
           <div class="catalog-products">
             <div class="products-grid">
               <article class="product-card product-card--discount">
-                <img class="product-card__image" src="images/headphones.svg" alt="Наушники Sound A1" width="800" height="600" loading="lazy">
+                <img class="product-card__image" src="images/sony-wh1000xm4.jpg" alt="Sony WH-1000XM4" width="960" height="720" loading="lazy">
                 <span class="product-card__badge">Скидка</span>
                 <p class="product-card__category">Наушники</p>
-                <h3 class="product-card__title">
-                  <a href="product-headphones.html">Наушники Sound A1</a>
-                </h3>
-                <p class="product-card__description">Беспроводные наушники с шумоподавлением и мягкими амбушюрами.</p>
+                <h3 class="product-card__title"><a href="product-sony-wh1000xm4.html">Sony WH-1000XM4</a></h3>
+                <p class="product-card__description">Беспроводные наушники с активным шумоподавлением и складной конструкцией.</p>
                 <ul class="product-card__specs">
                   <li>Полноразмерные, беспроводные</li>
-                  <li>Bluetooth 5.3, кабель 3,5 мм</li>
-                  <li>До 40 часов без шумоподавления</li>
+                  <li>Bluetooth 5.0 и кабель 3,5 мм</li>
+                  <li>До 30 часов с шумоподавлением</li>
                 </ul>
-                <p class="product-card__price">7 990 ₽ <del class="product-card__old-price">9 990 ₽</del>
-                </p>
+                <p class="product-card__price">19 990 ₽ <del class="product-card__old-price">24 990 ₽</del></p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-headphones.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=a1">Оформить заявку</a>
+                  <a class="button" href="product-sony-wh1000xm4.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=sony-wh1000xm4">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
               <article class="product-card">
-                <img class="product-card__image" src="images/headphones-lite.svg" alt="Наушники Sound Lite" width="800" height="600" loading="lazy">
+                <img class="product-card__image" src="images/bose-qc25-light.jpg" alt="Bose QuietComfort 25" width="960" height="720" loading="lazy">
                 <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Наушники</p>
-                <h3 class="product-card__title">
-                  <a href="product-sound-lite.html">Наушники Sound Lite</a>
-                </h3>
-                <p class="product-card__description">Лёгкие беспроводные наушники для прогулок и подкастов.</p>
+                <h3 class="product-card__title"><a href="product-bose-qc25.html">Bose QuietComfort 25</a></h3>
+                <p class="product-card__description">Проводные полноразмерные наушники с активным шумоподавлением.</p>
                 <ul class="product-card__specs">
-                  <li>Полноразмерные, складные</li>
-                  <li>Bluetooth 5.3</li>
-                  <li>До 30 часов</li>
+                  <li>Полноразмерные, проводные</li>
+                  <li>Кабель 3,5 мм</li>
+                  <li>До 35 часов от батарейки AAA</li>
                 </ul>
-                <p class="product-card__price">4 990 ₽ </p>
+                <p class="product-card__price">8 990 ₽</p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-sound-lite.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=a2">Оформить заявку</a>
+                  <a class="button" href="product-bose-qc25.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=bose-qc25">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
               <article class="product-card">
-                <img class="product-card__image" src="images/headphones-pro.svg" alt="Наушники Sound Pro" width="800" height="600" loading="lazy">
-                <span class="product-card__badge">Новинка</span>
+                <img class="product-card__image" src="images/airpods-max-white.jpg" alt="Apple AirPods Max (Lightning)" width="960" height="720" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Наушники</p>
-                <h3 class="product-card__title">
-                  <a href="product-sound-pro.html">Наушники Sound Pro</a>
-                </h3>
-                <p class="product-card__description">До 60 часов музыки и активное шумоподавление.</p>
+                <h3 class="product-card__title"><a href="product-airpods-max.html">Apple AirPods Max (Lightning)</a></h3>
+                <p class="product-card__description">Полноразмерные наушники Apple с активным шумоподавлением и пространственным аудио.</p>
                 <ul class="product-card__specs">
-                  <li>Полноразмерные</li>
-                  <li>Bluetooth 5.4</li>
-                  <li>До 60 часов</li>
+                  <li>Полноразмерные, беспроводные</li>
+                  <li>Bluetooth 5.0, активное шумоподавление</li>
+                  <li>До 20 часов работы</li>
                 </ul>
-                <p class="product-card__price">12 990 ₽ </p>
+                <p class="product-card__price">39 990 ₽</p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-sound-pro.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=a3">Оформить заявку</a>
+                  <a class="button" href="product-airpods-max.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=airpods-max">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
@@ -351,35 +242,14 @@
                 <tr>
                   <th scope="col">Модель</th>
                   <th scope="col">Тип</th>
-                  <th scope="col">Время работы</th>
+                  <th scope="col">Автономность</th>
                   <th scope="col">Цена</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">
-                    <a href="product-headphones.html">Наушники Sound A1</a>
-                  </th>
-                  <td>Полноразмерные, беспроводные</td>
-                  <td>До 40 часов без шумоподавления</td>
-                  <td>7 990 ₽</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a href="product-sound-lite.html">Наушники Sound Lite</a>
-                  </th>
-                  <td>Полноразмерные, складные</td>
-                  <td>До 30 часов</td>
-                  <td>4 990 ₽</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a href="product-sound-pro.html">Наушники Sound Pro</a>
-                  </th>
-                  <td>Полноразмерные</td>
-                  <td>До 60 часов</td>
-                  <td>12 990 ₽</td>
-                </tr>
+                <tr><th scope="row"><a href="product-sony-wh1000xm4.html">Sony WH-1000XM4</a></th><td>Полноразмерные, беспроводные</td><td>До 30 часов с шумоподавлением</td><td>19 990 ₽</td></tr>
+                <tr><th scope="row"><a href="product-bose-qc25.html">Bose QuietComfort 25</a></th><td>Полноразмерные, проводные</td><td>До 35 часов от батарейки AAA</td><td>8 990 ₽</td></tr>
+                <tr><th scope="row"><a href="product-airpods-max.html">Apple AirPods Max (Lightning)</a></th><td>Полноразмерные, беспроводные</td><td>До 20 часов работы</td><td>39 990 ₽</td></tr>
               </tbody>
             </table>
           </div>
@@ -415,8 +285,8 @@
                     <label for="notebooks-screen-compact">До 14 дюймов</label>
                   </div>
                   <div class="filters-form__option">
-                    <input id="notebooks-screen-large" name="screen-size" type="checkbox" value="large">
-                    <label for="notebooks-screen-large">16 дюймов</label>
+                    <input id="notebooks-screen-large" name="screen-size" type="checkbox" value="14">
+                    <label for="notebooks-screen-large">14 дюймов</label>
                   </div>
                 </div>
               </fieldset>
@@ -424,77 +294,97 @@
                 <legend class="filters-form__legend">Оперативная память</legend>
                 <div class="filters-form__options">
                   <div class="filters-form__option">
-                    <input id="notebooks-ram-16" name="ram" type="checkbox" value="16">
-                    <label for="notebooks-ram-16">16 ГБ</label>
+                    <input id="notebooks-ram-16" name="ram" type="checkbox" value="8">
+                    <label for="notebooks-ram-16">8 ГБ</label>
                   </div>
                   <div class="filters-form__option">
-                    <input id="notebooks-ram-32" name="ram" type="checkbox" value="32">
-                    <label for="notebooks-ram-32">32 ГБ</label>
+                    <input id="notebooks-ram-32" name="ram" type="checkbox" value="16">
+                    <label for="notebooks-ram-32">16 ГБ</label>
                   </div>
                 </div>
               </fieldset>
-              <button class="button" type="button" disabled>Применить</button>
+                            <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Встроенная память</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="notebooks-storage-256" name="storage" type="checkbox" value="256">
+                    <label for="notebooks-storage-256">256 ГБ</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="notebooks-storage-512" name="storage" type="checkbox" value="512">
+                    <label for="notebooks-storage-512">512 ГБ</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filters-form__group">
+                <legend class="filters-form__legend">Процессор</legend>
+                <div class="filters-form__options">
+                  <div class="filters-form__option">
+                    <input id="notebooks-chip-m1-pro" name="processor" type="checkbox" value="m1-pro">
+                    <label for="notebooks-chip-m1-pro">Apple M1 Pro</label>
+                  </div>
+                  <div class="filters-form__option">
+                    <input id="notebooks-chip-m2" name="processor" type="checkbox" value="m2">
+                    <label for="notebooks-chip-m2">Apple M2</label>
+                  </div>
+                </div>
+              </fieldset>
+<button class="button" type="button" disabled>Применить</button>
             </div>
           </aside>
           <div class="catalog-products">
             <div class="products-grid">
               <article class="product-card">
-                <img class="product-card__image" src="images/laptop.svg" alt="Ноутбук Vector S14" width="800" height="600" loading="lazy">
+                <img class="product-card__image" src="images/macbook-air-m2-alt.jpg" alt="MacBook Air 13″ M2 8/256 ГБ" width="960" height="1440" loading="lazy">
                 <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Ноутбуки</p>
-                <h3 class="product-card__title">
-                  <a href="product.html">Ноутбук Vector S14</a>
-                </h3>
-                <p class="product-card__description">Компактный ноутбук для документов, занятий и видеовстреч.</p>
+                <h3 class="product-card__title"><a href="product.html">MacBook Air 13″ M2 8/256 ГБ</a></h3>
+                <p class="product-card__description">Лёгкий ноутбук с чипом M2 для работы, учёбы и поездок.</p>
                 <ul class="product-card__specs">
-                  <li>14 дюймов, IPS, 1920 × 1080</li>
-                  <li>6 ядер, до 4,2 ГГц</li>
-                  <li>16 ГБ</li>
+                  <li>13,6″, Liquid Retina, 2560 × 1664</li>
+                  <li>Apple M2, 8 ядер</li>
+                  <li>8 ГБ / SSD 256 ГБ</li>
                 </ul>
-                <p class="product-card__price">54 990 ₽ </p>
+                <p class="product-card__price">79 990 ₽</p>
                 <div class="product-card__actions">
                   <a class="button" href="product.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=s14">Оформить заявку</a>
+                  <a class="button button--secondary" href="order.html?product=macbook-air-m2-8gb">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
               <article class="product-card">
-                <img class="product-card__image" src="images/laptop-s16.svg" alt="Ноутбук Vector S16" width="800" height="600" loading="lazy">
+                <img class="product-card__image" src="images/macbook-pro-m1-candidate.jpg" alt="MacBook Pro 14″ M1 Pro 16/512 ГБ" width="960" height="640" loading="lazy">
                 <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Ноутбуки</p>
-                <h3 class="product-card__title">
-                  <a href="product-vector-s16.html">Ноутбук Vector S16</a>
-                </h3>
-                <p class="product-card__description">Большой экран и 1 ТБ памяти для работы с проектами.</p>
+                <h3 class="product-card__title"><a href="product-macbook-pro-14.html">MacBook Pro 14″ M1 Pro 16/512 ГБ</a></h3>
+                <p class="product-card__description">Производительный ноутбук с экраном Liquid Retina XDR и чипом M1 Pro.</p>
                 <ul class="product-card__specs">
-                  <li>16 дюймов, IPS, 2560 × 1600</li>
-                  <li>8 ядер, до 4,5 ГГц</li>
-                  <li>32 ГБ</li>
+                  <li>14,2″, Liquid Retina XDR, 3024 × 1964</li>
+                  <li>Apple M1 Pro, 8 ядер</li>
+                  <li>16 ГБ / SSD 512 ГБ</li>
                 </ul>
-                <p class="product-card__price">74 990 ₽ </p>
+                <p class="product-card__price">119 990 ₽</p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-vector-s16.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=s16">Оформить заявку</a>
+                  <a class="button" href="product-macbook-pro-14.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=macbook-pro-14-m1">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
               <article class="product-card">
-                <img class="product-card__image" src="images/laptop-air13.svg" alt="Ноутбук Vector Air 13" width="800" height="600" loading="lazy">
-                <span class="product-card__badge">Новинка</span>
+                <img class="product-card__image" src="images/macbook-air-m2-light.jpg" alt="MacBook Air 13″ M2 16/512 ГБ" width="960" height="1440" loading="lazy">
+                <span class="product-card__badge">В наличии</span>
                 <p class="product-card__category">Ноутбуки</p>
-                <h3 class="product-card__title">
-                  <a href="product-vector-air13.html">Ноутбук Vector Air 13</a>
-                </h3>
-                <p class="product-card__description">Лёгкая модель с длительной автономностью для поездок.</p>
+                <h3 class="product-card__title"><a href="product-macbook-air-16gb.html">MacBook Air 13″ M2 16/512 ГБ</a></h3>
+                <p class="product-card__description">Тот же лёгкий корпус MacBook Air с увеличенной памятью и накопителем.</p>
                 <ul class="product-card__specs">
-                  <li>13,3 дюйма, IPS, 2560 × 1600</li>
-                  <li>6 ядер, до 4,0 ГГц</li>
-                  <li>16 ГБ</li>
+                  <li>13,6″, Liquid Retina, 2560 × 1664</li>
+                  <li>Apple M2, 8 ядер</li>
+                  <li>16 ГБ / SSD 512 ГБ</li>
                 </ul>
-                <p class="product-card__price">64 990 ₽ </p>
+                <p class="product-card__price">99 990 ₽</p>
                 <div class="product-card__actions">
-                  <a class="button" href="product-vector-air13.html">Подробнее</a>
-                  <a class="button button--secondary" href="order.html?product=air13">Оформить заявку</a>
+                  <a class="button" href="product-macbook-air-16gb.html">Подробнее</a>
+                  <a class="button button--secondary" href="order.html?product=macbook-air-m2-16gb">Оформить заявку</a>
                   <button class="button button--secondary" type="button">Добавить в корзину</button>
                 </div>
               </article>
@@ -510,35 +400,14 @@
                 <tr>
                   <th scope="col">Модель</th>
                   <th scope="col">Экран</th>
-                  <th scope="col">Оперативная память</th>
+                  <th scope="col">Память</th>
                   <th scope="col">Цена</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">
-                    <a href="product.html">Ноутбук Vector S14</a>
-                  </th>
-                  <td>14 дюймов, IPS, 1920 × 1080</td>
-                  <td>16 ГБ</td>
-                  <td>54 990 ₽</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a href="product-vector-s16.html">Ноутбук Vector S16</a>
-                  </th>
-                  <td>16 дюймов, IPS, 2560 × 1600</td>
-                  <td>32 ГБ</td>
-                  <td>74 990 ₽</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a href="product-vector-air13.html">Ноутбук Vector Air 13</a>
-                  </th>
-                  <td>13,3 дюйма, IPS, 2560 × 1600</td>
-                  <td>16 ГБ</td>
-                  <td>64 990 ₽</td>
-                </tr>
+                <tr><th scope="row"><a href="product.html">MacBook Air 13″ M2 8/256 ГБ</a></th><td>13,6″, Liquid Retina, 2560 × 1664</td><td>8 ГБ / SSD 256 ГБ</td><td>79 990 ₽</td></tr>
+                <tr><th scope="row"><a href="product-macbook-pro-14.html">MacBook Pro 14″ M1 Pro 16/512 ГБ</a></th><td>14,2″, Liquid Retina XDR, 3024 × 1964</td><td>16 ГБ / SSD 512 ГБ</td><td>119 990 ₽</td></tr>
+                <tr><th scope="row"><a href="product-macbook-air-16gb.html">MacBook Air 13″ M2 16/512 ГБ</a></th><td>13,6″, Liquid Retina, 2560 × 1664</td><td>16 ГБ / SSD 512 ГБ</td><td>99 990 ₽</td></tr>
               </tbody>
             </table>
           </div>
